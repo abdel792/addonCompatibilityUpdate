@@ -22,6 +22,6 @@ Cela parce qu'il est possible que de nouvelles routines soient utilisées dans l
 
 ## Compatibilité ##
 
-* Cette extension a été testé avec des versions de NVDA allant de 2019.1 à 2022.1.
+* Cette extension a été testé avec des versions de NVDA allant de 2019.3 à 2022.1.
 
 [1]: https://github.com/abdel792/addonCompatibilityUpdate/releases/download/v22.12/addonCompatibilityUpdate-22.12.nvda-addon
