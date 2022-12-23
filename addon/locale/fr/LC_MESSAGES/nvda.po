@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the 'addonCompatibilityUpdate' package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'addonCompatibilityUpdate' '22.12'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2022-12-23 14:57+0100\n"
+"PO-Revision-Date: 2022-12-23 15:07+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Translators: The name of the compatibility years item in NVDA Tools menu.
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:36
+msgid "Com&patibility years for add-ons..."
+msgstr "Années de compatibilité pour les extensions..."
+
+#. Translators: The tooltyp text for the compatibility years item in NVDA Tools menu.
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:38
+msgid "Allows you to choose your compatibility year for your add-ons"
+msgstr ""
+"Vous permet de choisir votre année de compatibilité pour vos extensions"
+
+#. Translators: error message when attempting to open more than one compatibility year settings dialogs.
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:60
+msgid "Compatibility year dialog is already open."
+msgstr "La boîte de dialogue Année de compatibilité est déjà ouverte."
+
+#. Translators: Message presented in input help mode.
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:66
+msgid "Display the Compatibility year settings dialog box."
+msgstr "Affiche la boîte de dialogue Paramètres de l'année de compatibilité."
+
+#. Translators: This is the label for the compatibility years settings panel.
+#: addon\globalPlugins\addonCompatibilityUpdate\compatibilityYear.py:42
+msgid "List of years to choose for add-on compatibility"
+msgstr "Liste des années à choisir pour la compatibilité des extensions"
+
+#. Translators: This is the label for a combo box in the Compatibility year settings dialog.
+#: addon\globalPlugins\addonCompatibilityUpdate\compatibilityYear.py:48
+msgid "C&ompatibility years for add-ons:"
+msgstr "Années de com&patibilité pour les extensions :"
+
+#. Translators: A message informing the user that he has installed an incompatible version.
+#: addon\installTasks.py:20
+msgid ""
+"You have installed the updateAddonsCompatibility add-on which is "
+"incompatible with this one. Do you want to uninstall this old version?"
+msgstr ""
+"Vous avez installé l'extension updateAddonsCompatibility qui est "
+"incompatible avec cette nouvelle version. Voulez-vous désinstaller cette "
+"ancienne version ?"
+
+#. Translators: The title of the dialogbox.
+#: addon\installTasks.py:22
+msgid "Uninstall incompatible version"
+msgstr "Désinstaller une version incompatible"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Add-om compatibility update"
+msgstr "Mise à jour de compatibilité des extensions"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid ""
+"This add-on allows you to update the value of the lastTestedNVDAVersion key "
+"in the manifest file of each of the installed add-ons so that it is "
+"compatible with a year chosen from a list of choices."
+msgstr ""
+"Cette extension permet de mettre à jour la valeur de la clé "
+"lastTestedNVDAVersion dans le fichier manifeste de chacune des extensions "
+"installées afin qu'elles soient compatibles avec une année choisie dans une "
+"liste."

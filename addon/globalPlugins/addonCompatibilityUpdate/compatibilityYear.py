@@ -1,4 +1,13 @@
+# -*- coding: utf-8 -*-
+# addonCompatibilityUpdate Add-on for NVDA
+# compatibilityYear.py.
+# Copyright 2022-2023 Abdelkrim Bensaïd, released under gPL.
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
+
 import versionInfo
+from . import skipTranslation
+import addonHandler
 import os
 import re
 import globalVars
@@ -7,9 +16,10 @@ import gui
 import config
 from gui import SettingsPanel, SettingsDialog
 import wx
+addonHandler.initTranslation()
 
 def promptUserForRestart():
-	restartMessage = _(
+	restartMessage = skipTranslation.translate(
 		# Translators: A message asking the user if they wish to restart NVDA
 		# as addons have been added, enabled/disabled or removed.
 		"Changes were made to add-ons. "
@@ -17,7 +27,7 @@ def promptUserForRestart():
 		"Would you like to restart now?"
 	)
 	# Translators: Title for message asking if the user wishes to restart NVDA as addons have been added or removed.
-	restartTitle = _("Restart NVDA")
+	restartTitle = skipTranslation.translate("Restart NVDA")
 	result = gui.messageBox(
 		message=restartMessage,
 		caption=restartTitle,
@@ -26,16 +36,16 @@ def promptUserForRestart():
 	if wx.YES == result:
 		core.restart()
 
-class CompatibleYearSettingsDialog(SettingsDialog):
+class CompatibilityYearSettingsDialog(SettingsDialog):
 
-	# Translators: This is the label for the compatible years settings panel.
-	title = _("Compatible years")
+	# Translators: This is the label for the compatibility years settings panel.
+	title = _("List of years to choose for add-on compatibility")
 
 	def makeSettings(self, settingsSizer):
 		self._compatibleYearChoices = tuple([str(x) for x in range (versionInfo.version_year, versionInfo.version_year + 11)])
 
-		# Translators: This is the label for a combo box in the Compatible year settings dialog.
-		self._compatibleYearTitle = _("C&ompatible years:")
+		# Translators: This is the label for a combo box in the Compatibility year settings dialog.
+		self._compatibleYearTitle = _("C&ompatibility years for add-ons:")
 
 		self.showCompatibleYearDialog(settingsSizer=settingsSizer)
 
@@ -55,7 +65,7 @@ class CompatibleYearSettingsDialog(SettingsDialog):
 				break
 
 	def onOk(self, evt):
-		super(CompatibleYearSettingsDialog, self).onOk(evt)
+		super(CompatibilityYearSettingsDialog, self).onOk(evt)
 		config.conf["addonCompatibilityUpdate"]["compatibleYearChoice"] = self._compatibleYearChoice.GetStringSelection()
 		ptrn = r"(?<=lastTestedNVDAVersion).+$"
 		rgx = re.compile(ptrn, re.M)
