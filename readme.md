@@ -23,4 +23,4 @@ That because it is possible that new routines are used in the updated version, o
 * This addon has been tested with versions of NVDA ranging from 2019.1 up to 2023.1.
 
 
-[1]: https://github.com/abdel792/addonCompatibilityUpdate/releases/download/v22.12/addonCompatibilityUpdate-22.11.nvda-addon
+[1]: https://github.com/abdel792/addonCompatibilityUpdate/releases/download/v22.12/addonCompatibilityUpdate-22.12.nvda-addon
