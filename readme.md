@@ -20,7 +20,7 @@ That because it is possible that new routines are used in the updated version, o
 
 ## Compatibility ##
 
-* This addon has been tested with versions of NVDA ranging from 2019.1 up to 2023.1.
+* This addon has been tested with versions of NVDA ranging from 2019.1 up to 2022.1.
 
 
 [1]: https://github.com/abdel792/addonCompatibilityUpdate/releases/download/v22.12/addonCompatibilityUpdate-22.12.nvda-addon
