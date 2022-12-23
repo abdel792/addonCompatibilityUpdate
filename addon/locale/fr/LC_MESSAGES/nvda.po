@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'addonCompatibilityUpdate' '22.12'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2022-12-23 14:57+0100\n"
-"PO-Revision-Date: 2022-12-23 15:07+0100\n"
+"POT-Creation-Date: 2022-12-23 17:07+0100\n"
+"PO-Revision-Date: 2022-12-23 17:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -20,8 +20,8 @@ msgstr ""
 
 #. Translators: The name of the compatibility years item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:36
-msgid "Com&patibility years for add-ons..."
-msgstr "Années de compatibilité pour les extensions..."
+msgid "Change com&patibility year for add-ons..."
+msgstr "Changer l'année de com&patibilité pour les extensions..."
 
 #. Translators: The tooltyp text for the compatibility years item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:38
@@ -30,12 +30,12 @@ msgstr ""
 "Vous permet de choisir votre année de compatibilité pour vos extensions"
 
 #. Translators: error message when attempting to open more than one compatibility year settings dialogs.
-#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:60
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:59
 msgid "Compatibility year dialog is already open."
 msgstr "La boîte de dialogue Année de compatibilité est déjà ouverte."
 
 #. Translators: Message presented in input help mode.
-#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:66
+#: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:65
 msgid "Display the Compatibility year settings dialog box."
 msgstr "Affiche la boîte de dialogue Paramètres de l'année de compatibilité."
 
@@ -47,7 +47,7 @@ msgstr "Liste des années à choisir pour la compatibilité des extensions"
 #. Translators: This is the label for a combo box in the Compatibility year settings dialog.
 #: addon\globalPlugins\addonCompatibilityUpdate\compatibilityYear.py:48
 msgid "C&ompatibility years for add-ons:"
-msgstr "Années de com&patibilité pour les extensions :"
+msgstr "Années de compatibilité pour les extensions :"
 
 #. Translators: A message informing the user that he has installed an incompatible version.
 #: addon\installTasks.py:20

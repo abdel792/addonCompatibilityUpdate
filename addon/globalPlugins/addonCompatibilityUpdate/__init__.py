@@ -26,14 +26,14 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 	scriptCategory = addonHandler.getCodeAddon().manifest["summary"]
 
-	def __init__(self):
-		super(globalPluginHandler.GlobalPlugin, self).__init__()
-		if globalVars.appArgs.secure or config.isAppX:
+	def __init__(self, *args, **kwargs):
+		super(globalPluginHandler.GlobalPlugin, self).__init__(*args, **kwargs)
+		if globalVars.appArgs.secure:
 			return
 		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.compatibilityYearSettings = self.toolsMenu.Append(
 			# Translators: The name of the compatibility years item in NVDA Tools menu.
-			wx.ID_ANY, _("Com&patibility years for add-ons..."),
+			wx.ID_ANY, _("Change com&patibility year for add-ons..."),
 			# Translators: The tooltyp text for the compatibility years item in NVDA Tools menu.
 			_("Allows you to choose your compatibility year for your add-ons")
 		)
@@ -45,7 +45,6 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			self.toolsMenu.Remove(self.compatibilityYearSettings)
 		except (RuntimeError, AttributeError):
 			pass
-
 
 	def onCompatibilityYearSettingsDialog(self, evt):
 		try:

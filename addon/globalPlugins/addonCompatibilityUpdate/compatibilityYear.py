@@ -42,32 +42,32 @@ class CompatibilityYearSettingsDialog(SettingsDialog):
 	title = _("List of years to choose for add-on compatibility")
 
 	def makeSettings(self, settingsSizer):
-		self._compatibleYearChoices = tuple([str(x) for x in range (versionInfo.version_year, versionInfo.version_year + 11)])
+		self._compatibilityYearChoices = tuple([str(x) for x in range (versionInfo.version_year, versionInfo.version_year + 11)])
 
 		# Translators: This is the label for a combo box in the Compatibility year settings dialog.
-		self._compatibleYearTitle = _("C&ompatibility years for add-ons:")
+		self._compatibilityYearTitle = _("C&ompatibility years for add-ons:")
 
-		self.showCompatibleYearDialog(settingsSizer=settingsSizer)
+		self.showCompatibilityYearDialog(settingsSizer=settingsSizer)
 
 	def postInit(self):
-		self._compatibleYearChoice.SetFocus()
+		self._compatibilityYearChoice.SetFocus()
 
-	def showCompatibleYearDialog(self, settingsSizer):
-		compatibleYearSettingsGuiHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		self._compatibleYearChoice = compatibleYearSettingsGuiHelper.addLabeledControl(
-			self._compatibleYearTitle, wx.Choice, choices=self._compatibleYearChoices
+	def showCompatibilityYearDialog(self, settingsSizer):
+		compatibilityYearSettingsGuiHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		self._compatibilityYearChoice = compatibilityYearSettingsGuiHelper.addLabeledControl(
+			self._compatibilityYearTitle, wx.Choice, choices=self._compatibilityYearChoices
 		)
 
-		curChoice = config.conf["addonCompatibilityUpdate"]["compatibleYearChoice"]
-		for index, name in enumerate(self._compatibleYearChoices):
+		curChoice = config.conf["addonCompatibilityUpdate"]["compatibilityYearChoice"]
+		for index, name in enumerate(self._compatibilityYearChoices):
 			if name == curChoice:
-				self._compatibleYearChoice.SetSelection(index)
+				self._compatibilityYearChoice.SetSelection(index)
 				break
 
 	def onOk(self, evt):
 		super(CompatibilityYearSettingsDialog, self).onOk(evt)
-		config.conf["addonCompatibilityUpdate"]["compatibleYearChoice"] = self._compatibleYearChoice.GetStringSelection()
-		ptrn = r"(?<=lastTestedNVDAVersion).+$"
+		config.conf["addonCompatibilityUpdate"]["compatibilityYearChoice"] = self._compatibilityYearChoice.GetStringSelection()
+		ptrn = r"(?<=lastTestedNVDAVersion)[0-9\.]+"
 		rgx = re.compile(ptrn, re.M)
 		addonPath = os.path.join(globalVars.appArgs.configPath, "addons")
 		for dir in os.listdir(addonPath):
@@ -75,7 +75,7 @@ class CompatibilityYearSettingsDialog(SettingsDialog):
 				path = os.path.join(addonPath, dir, "manifest.ini")
 				with open(path, "r", encoding = "utf-8") as f:
 					content = f.read()
-				content = rgx.sub(f" = {self._compatibleYearChoice.GetStringSelection()}.1", content)
+				content = rgx.sub(f" = {self._compatibilityYearChoice.GetStringSelection()}.1", content)
 				with open(path, "w", encoding = "utf-8") as f:
 					f.write(content)
 		wx.CallAfter(promptUserForRestart)
