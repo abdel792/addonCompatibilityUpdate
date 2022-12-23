@@ -67,7 +67,7 @@ class YearCompatibilitySettingsDialog(SettingsDialog):
 	def onOk(self, evt):
 		super(YearCompatibilitySettingsDialog, self).onOk(evt)
 		config.conf["addonCompatibilityUpdate"]["yearCompatibilityChoice"] = self._yearCompatibilityChoice.GetStringSelection()
-		match = r"(?<=lastTestedNVDAVersion)[0-9\.]+"
+		match = r"(?<=lastTestedNVDAVersion) ?= ?[0-9\.]+"
 		reg = re.compile(match, re.M)
 		addonPath = os.path.join(globalVars.appArgs.configPath, "addons")
 		for dir in os.listdir(addonPath):

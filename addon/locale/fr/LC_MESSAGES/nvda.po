@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'addonCompatibilityUpdate' '22.12'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2022-12-23 20:55+0100\n"
-"PO-Revision-Date: 2022-12-23 21:03+0100\n"
+"PO-Revision-Date: 2022-12-23 23:02+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Translators: The name of the year compatibility item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:36
 msgid "Change year com&patibility for add-ons..."
-msgstr "Changer la compatibilité de l'année pour les extensions..."
+msgstr "Changer la com&patibilité de l'année pour les extensions..."
 
 #. Translators: The tooltyp text for the year compatibility item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:38
