@@ -7,47 +7,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'addonCompatibilityUpdate' '22.12'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2022-12-23 17:07+0100\n"
-"PO-Revision-Date: 2022-12-23 17:10+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2022-12-23 20:55+0100\n"
+"PO-Revision-Date: 2022-12-23 21:03+0100\n"
 "Language-Team: \n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
 
-#. Translators: The name of the compatibility years item in NVDA Tools menu.
+#. Translators: The name of the year compatibility item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:36
-msgid "Change com&patibility year for add-ons..."
-msgstr "Changer l'année de com&patibilité pour les extensions..."
+msgid "Change year com&patibility for add-ons..."
+msgstr "Changer la compatibilité de l'année pour les extensions..."
 
-#. Translators: The tooltyp text for the compatibility years item in NVDA Tools menu.
+#. Translators: The tooltyp text for the year compatibility item in NVDA Tools menu.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:38
-msgid "Allows you to choose your compatibility year for your add-ons"
+msgid "Allows you to choose your year compatibility for your add-ons"
 msgstr ""
 "Vous permet de choisir votre année de compatibilité pour vos extensions"
 
-#. Translators: error message when attempting to open more than one compatibility year settings dialogs.
+#. Translators: error message when attempting to open more than one year compatibility settings dialogs.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:59
-msgid "Compatibility year dialog is already open."
-msgstr "La boîte de dialogue Année de compatibilité est déjà ouverte."
+msgid "Year compatibility dialog is already open."
+msgstr "La boîte de dialogue de compatibilité des années est déjà ouverte."
 
 #. Translators: Message presented in input help mode.
 #: addon\globalPlugins\addonCompatibilityUpdate\__init__.py:65
-msgid "Display the Compatibility year settings dialog box."
-msgstr "Affiche la boîte de dialogue Paramètres de l'année de compatibilité."
+msgid "Display the year compatibility settings dialog box."
+msgstr ""
+"Affiche la boîte de dialogue des paramètres de compatibilité de l'année."
 
-#. Translators: This is the label for the compatibility years settings panel.
-#: addon\globalPlugins\addonCompatibilityUpdate\compatibilityYear.py:42
+#. Translators: This is the label for the year compatibility settings panel.
+#: addon\globalPlugins\addonCompatibilityUpdate\yearCompatibility.py:42
 msgid "List of years to choose for add-on compatibility"
 msgstr "Liste des années à choisir pour la compatibilité des extensions"
 
 #. Translators: This is the label for a combo box in the Compatibility year settings dialog.
-#: addon\globalPlugins\addonCompatibilityUpdate\compatibilityYear.py:48
-msgid "C&ompatibility years for add-ons:"
-msgstr "Années de compatibilité pour les extensions :"
+#: addon\globalPlugins\addonCompatibilityUpdate\yearCompatibility.py:48
+msgid "Year compatibility for add-ons:"
+msgstr "Compatibilité de l'année pour les extensions :"
 
 #. Translators: A message informing the user that he has installed an incompatible version.
 #: addon\installTasks.py:20

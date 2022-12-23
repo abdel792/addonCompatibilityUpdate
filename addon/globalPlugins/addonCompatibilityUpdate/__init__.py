@@ -15,10 +15,10 @@ import gui
 import core
 import os
 from scriptHandler import script
-from .compatibilityYear import CompatibilityYearSettingsDialog
+from .yearCompatibility import YearCompatibilitySettingsDialog
 addonHandler.initTranslation()
 confspec = {
-	"compatibilityYearChoice": f"string(default={versionInfo.version_year})",
+	"yearCompatibilityChoice": f"string(default={versionInfo.version_year})",
 }
 config.conf.spec["addonCompatibilityUpdate"] = confspec
 
@@ -31,40 +31,40 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		if globalVars.appArgs.secure:
 			return
 		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
-		self.compatibilityYearSettings = self.toolsMenu.Append(
-			# Translators: The name of the compatibility years item in NVDA Tools menu.
-			wx.ID_ANY, _("Change com&patibility year for add-ons..."),
-			# Translators: The tooltyp text for the compatibility years item in NVDA Tools menu.
-			_("Allows you to choose your compatibility year for your add-ons")
+		self.yearCompatibilitySettings = self.toolsMenu.Append(
+			# Translators: The name of the year compatibility item in NVDA Tools menu.
+			wx.ID_ANY, _("Change year com&patibility for add-ons..."),
+			# Translators: The tooltyp text for the year compatibility item in NVDA Tools menu.
+			_("Allows you to choose your year compatibility for your add-ons")
 		)
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCompatibilityYearSettingsDialog, self.compatibilityYearSettings)
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onYearCompatibilitySettingsDialog, self.yearCompatibilitySettings)
 
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
 		try:
-			self.toolsMenu.Remove(self.compatibilityYearSettings)
+			self.toolsMenu.Remove(self.yearCompatibilitySettings)
 		except (RuntimeError, AttributeError):
 			pass
 
-	def onCompatibilityYearSettingsDialog(self, evt):
+	def onYearCompatibilitySettingsDialog(self, evt):
 		try:
 			gui.mainFrame.prePopup()
-			d = CompatibilityYearSettingsDialog(gui.mainFrame)
+			d = YearCompatibilitySettingsDialog(gui.mainFrame)
 			d.Show()
 			gui.mainFrame.postPopup()
 		except gui.settingsDialogs.SettingsDialog.MultiInstanceErrorWithDialog:
 			wx.CallAfter(
 				gui.messageBox,
-				# Translators: error message when attempting to open more than one compatibility year settings dialogs.
-				_("Compatibility year dialog is already open."),
+				# Translators: error message when attempting to open more than one year compatibility settings dialogs.
+				_("Year compatibility dialog is already open."),
 				skipTranslation.translate("Error"), wx.OK | wx.ICON_ERROR
 			)
 
 	@script(
 		# Translators: Message presented in input help mode.
-		description=_("Display the Compatibility year settings dialog box.")
+		description=_("Display the year compatibility settings dialog box.")
 	)
-	def script_activateCompatibilityYearSettingsDialog(self, gesture):
-		wx.CallAfter(self.onCompatibilityYearSettingsDialog, None)
+	def script_activateYearCompatibilitySettingsDialog(self, gesture):
+		wx.CallAfter(self.onYearCompatibilitySettingsDialog, None)
 
 

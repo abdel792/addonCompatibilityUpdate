@@ -10,7 +10,9 @@ This add-on allows to update the compatibility of the installed add-ons from a c
 
 It updates the value of the "lastTestedNVDAVersion" key in add-on manifest files.
 
-The year to choose can be selected from an item in NVDA's Tools menu, named "Change compatibility year for add-ons".
+The year to choose can be selected from an item in NVDA's Tools menu, named "Change year compatibility for add-ons".
+
+You can define a gesture, if you wish, for opening this dialog box by assigning it from the command gestures, in the "Add-on compatibility update" category.
 
 ## Important ##
 

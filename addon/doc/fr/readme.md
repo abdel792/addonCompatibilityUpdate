@@ -10,7 +10,9 @@ Cet extension permet de mettre à jour la compatibilité des extensions install�
 
 Elle met à jour la valeur de la clé "lastTestedNVDAVersion" dans les fichiers manifestes des extensions.
 
-L'année à choisir peut être sélectionnée à partir d'un item du menu Outils de NVDA, dont le nom est "Changer l'année de compatibilité des extensions".
+L'année à choisir peut être sélectionnée à partir d'un item du menu Outils de NVDA, dont le nom est "Changer la compatibilité de l'année pour les extensions".
+
+Vous pouvez définir un geste, si vous le souhaitez, pour ouvrir cette boîte de dialogue, en l'attribuant depuis les gestes de commandes, dans la catégorie "Mise à jour de compatibilité des extensions".
 
 ## Important ##
 
